@@ -7,7 +7,7 @@ import Search from './componets/Search';
 function App() {
   const [api, setApi] = useState([]);
   const [term, setTerm] = useState('popular');
-  const [url, setUrl] = useState(`https://api.themoviedb.org/3/movie/${term}?api_key=e0515b297f76b6f660c169e9fe56b7b7&language=en-US&page=1`)
+  const [url, setUrl] = useState(`https://api.themoviedb.org/3/movie/${term}?api_key=e0515b297f76b6f660c169e9fe56b7b7&language=en-US&page=1`);
 
   const fetchAPI = () => {
     fetch(url)
@@ -24,7 +24,7 @@ function App() {
     <div className='bg-zinc-900'>
       <Navbar setTerm={setTerm} term={term} setUrl={setUrl} />
 
-      <div className='container mx-auto'>
+      <div className='mx-auto'>
         <Search setTerm={setTerm} setUrl={setUrl} />
 
           {api.length === 0 && <h1 className='text-3xl font-bold text-gray flex

@@ -18,33 +18,14 @@ const Search = ({ setUrl, setTerm }) => {
  }
     return (
         <div>
-            <form className=' flex justify-end mb-3 shadow-xl' onSubmit={handleSubmit}>
+            <form className=' flex justify-end mb-3' onSubmit={handleSubmit}>
                 <input
-                    type='text'
-                    placeholder='search movie'
-                    className=' bg-indigo-800 mr-3 px-2 text-white focus:outline-none rounded'
-                    value={search}
-                    onChange={handleSearch}
-                    />
-                <button
-                    type='submit'
-                    className='flex-shrink-0 bg-indigo-800 hover:bg-indigo-500 border-indigo-800
-                         hover:border-indigo-500 text-sm border-4 text-white px-1 rounded'>
-                    <svg
-                        className="w-6 h-6"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                    >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                        />
-                    </svg>
-                </button>
+            type="text"
+            placeholder="search movie here..."
+            className="border border-gray-500 bg-gray-300 text-black outline-none w-4/5 p-2 m-auto mb-5 rounded-md"
+            value={search}
+            onChange={handleSearch}
+          />
             </form>
         </div>
     )

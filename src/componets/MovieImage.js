@@ -5,13 +5,12 @@ const MovieImage = ({ api }) => {
     const imageUrl = 'https://image.tmdb.org/t/p/w500';
 
     return (
-        <>
-            <div className="grid grid-cols-3 justify-items-center mx-w-sm rounded">
+            <div className="grid gap-6 sm:grid md:grid-cols-2 xl:grid-cols-3 3xl:flex flex-wrap justify-center px-5">
                 {api.map((item, index) => (
-                    <div className='max-w-sm mb-2 rounded-lg overflow-hidden shadow-lg' key={index}>
-                        <img src={imageUrl + item.poster_path} alt='' className='w-full' />
+                    <div className='mb-2 rounded-lg overflow-hidden shadow-lg transform transition duration-200 ease-in sm:hover:scale-105 ' key={index}>
+                        <img src={imageUrl + item.poster_path} alt='' className='w-full h-96 group cursor-pointer overflow-hidden hover:z-50' />
                         <div className="flex justify-between p-3 font-bold font-mono text-green-500
-                                        text-xl max-h-20 overflow-hidden">
+                                        text-xl max-h-20">
                             <p>{item.title}</p>
                             <span>
                                 <svg className="w-6 h-6"
@@ -41,7 +40,6 @@ const MovieImage = ({ api }) => {
                     </div>
                 ))}
             </div>
-        </>
     )
 }
 

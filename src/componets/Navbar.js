@@ -16,32 +16,30 @@ const Navbar = ({ setTerm, term, setUrl }) => {
     }
 
     return (
-        <div>
-            <div className='flex justify-between align-center px-8 py-4 mb-3 border-b-2 
-                            shadow-lg bg-black text-white font-bold font-mono'>
-                <div className='p-3'>
-                   <p className='text-xl bold'> {term} </p>
+            <div className='flex justify-between align-center px-8 py-8 mb-3
+                            shadow-lg text-white font-bold font-mono'>
+                <div className='px-3'>
+                   <p className='text-3xl bold uppercase'> {term} </p>
                 </div>
                 <div className='pl-2 '>
                     <button
                         onClick={popular}
-                        className='p-3 hover:bg-zinc-900 rounded-lg hover:text-xl'
+                        className='mr-3 lg:mr-8 text-sm lg:text-xl hover:bg-zinc-900 rounded-lg transform transition duration-200 ease-in lg:hover:scale-150 uppercase'
                     >
                         Popular
                     </button>
                     <button
                         onClick={top_rated}
-                        className='p-3 hover:bg-zinc-900 rounded-lg hover:text-xl'
+                        className='mr-2 lg:mr-8 text-sm lg:text-xl hover:bg-zinc-900 rounded-lg transform transition duration-200 ease-in lg:hover:scale-150 uppercase'
                     >Top rated
                     </button>
                     <button
                         onClick={upcoming}
-                        className='p-3 hover:bg-zinc-900 rounded-lg hover:text-xl'
+                        className='text-sm lg:text-xl hover:bg-zinc-900 rounded-lg transform transition duration-200 ease-in lg:hover:scale-150 uppercase'
                     >Upcoming
                     </button>
                 </div>
             </div>
-        </div>
     )
 }
 
